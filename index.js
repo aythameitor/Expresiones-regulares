@@ -130,8 +130,27 @@ function nombreUsuario(cadena){
         }
     } 
 }
+function email(cadena){
+    let expresion = new RegExp('[a-zA-Z][@][a-zA-Z][.]{1}[a-zA-Z]{2,3}');
+    if(cadena != ""){
+        if(expresion.test(cadena)){
+            document.getElementById("resultado").innerHTML = "La cadena <strong>" + cadena +  "</strong> es válida.";
+        } else {
+            document.getElementById("resultado").innerHTML = "La cadena <strong>" + cadena +  "</strong> no es válida.";
+        }
+    } 
+}
 
-
+function ipv4(cadena){
+    let expresion = new RegExp('^([0-9]{3}[.]{1}){3}[0-9]{3}$');
+    if(cadena != ""){
+        if(expresion.test(cadena)){
+            document.getElementById("resultado").innerHTML = "La cadena <strong>" + cadena +  "</strong> es válida.";
+        } else {
+            document.getElementById("resultado").innerHTML = "La cadena <strong>" + cadena +  "</strong> no es válida.";
+        }
+    } 
+}
 document.addEventListener("click", e=>{
     if(e.target.id == "confirmar"){
         switch (document.getElementById("opcion").value) {
@@ -169,6 +188,9 @@ document.addEventListener("click", e=>{
                 break;
             case "nombreUsuario":
                 nombreUsuario(document.getElementById("expresion").value);
+                break;
+            case "ipv4":
+                ipv4(document.getElementById("expresion").value);
                 break;
         }
     }
