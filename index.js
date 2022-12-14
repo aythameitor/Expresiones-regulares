@@ -77,6 +77,61 @@ function numerosPositivosNegativos(cadena){
     } 
 }
 
+function milesYDecimales(cadena){
+    let expresion = new RegExp('^([0-9]{3}[,]{1})*[.]{1}[0-9]{2}$');
+    if(cadena != ""){
+        if(expresion.test(cadena)){
+            document.getElementById("resultado").innerHTML = "La cadena <strong>" + cadena +  "</strong> es válida.";
+        } else {
+            document.getElementById("resultado").innerHTML = "La cadena <strong>" + cadena +  "</strong> no es válida.";
+        }
+    } 
+}
+
+function fecha(cadena){
+    let expresion = new RegExp('^$');
+    if(cadena != ""){
+        if(expresion.test(cadena)){
+            document.getElementById("resultado").innerHTML = "La cadena <strong>" + cadena +  "</strong> es válida.";
+        } else {
+            document.getElementById("resultado").innerHTML = "La cadena <strong>" + cadena +  "</strong> no es válida.";
+        }
+    } 
+}
+function horaF12h(cadena){
+    let expresion = new RegExp('^[0-1]{0,1}[0-9]{1}[aApP]{1}[mM]{1}$');
+    if(cadena != ""){
+        if(expresion.test(cadena)){
+            document.getElementById("resultado").innerHTML = "La cadena <strong>" + cadena +  "</strong> es válida.";
+        } else {
+            document.getElementById("resultado").innerHTML = "La cadena <strong>" + cadena +  "</strong> no es válida.";
+        }
+    } 
+}
+
+function horaF24h(cadena){
+    let expresion = new RegExp('^[0-2]{0,1}[0-9]{1}$');
+    if(cadena != ""){
+        if(expresion.test(cadena)){
+            document.getElementById("resultado").innerHTML = "La cadena <strong>" + cadena +  "</strong> es válida.";
+        } else {
+            document.getElementById("resultado").innerHTML = "La cadena <strong>" + cadena +  "</strong> no es válida.";
+        }
+    } 
+}
+
+function nombreUsuario(cadena){
+    let expresion = new RegExp('([a-z][0-9][-][_]){3,16}');
+    if(cadena != ""){
+        if(expresion.test(cadena)){
+            document.getElementById("resultado").innerHTML = "La cadena <strong>" + cadena +  "</strong> es válida.";
+        } else {
+            document.getElementById("resultado").innerHTML = "La cadena <strong>" + cadena +  "</strong> no es válida.";
+        }
+    } 
+}
+
+
 document.addEventListener("click", e=>{
     if(e.target.id == "confirmar"){
         switch (document.getElementById("opcion").value) {
@@ -100,6 +155,20 @@ document.addEventListener("click", e=>{
                 break;
             case "positivosYNegativos":
                 numerosPositivosNegativos(document.getElementById("expresion").value);
+                break;
+            case "milesYDecimales":
+                milesYDecimales(document.getElementById("expresion").value);
+                break;
+            case "horaF12h":
+                if(parseInt(document.getElementById("expresion").value) < 13)
+                horaF12h(document.getElementById("expresion").value);
+                break;
+            case "horaF24h":
+                if(parseInt(document.getElementById("expresion").value) < 24)
+                horaF24h(document.getElementById("expresion").value);
+                break;
+            case "nombreUsuario":
+                nombreUsuario(document.getElementById("expresion").value);
                 break;
         }
     }
