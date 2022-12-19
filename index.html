@@ -5,32 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expresiones regulares</title>
-
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>Expresiones regulares</h1>
-    <select id="opcion">
-        <option value="numeros">Solo numeros</option>
-        <option value="letras">Solo letras</option>
-        <option value="letrasEspacio">Letras con espacio</option>
-        <option value="nombreApellido">Nombre y apellido</option>
-        <option value="precio">Precio</option>
-        <option value="enterosYDecimales">Enteros y decimales</option>
-        <option value="positivosYNegativos">Positivos y negativos</option>
-        <option value="milesYDecimales">Miles y decimales</option>
-        <option value="fecha">Fecha DD/MM/YYYY</option>
-        <option value="horaF12h">Hora formato 12h</option>
-        <option value="horaF24h">Hora formato 24h</option>
-        <option value="nombreUsuario">Nombre de usuario</option>
-        <option value="contrasena">Contraseña</option>
-        <option value="ipv4">Ipv4</option>
-        <option value="url">url</option>
-        <option value="colores">colores</option>
-    </select>
-    <input type="text" placeholder="Introduce la expresión" id="expresion">
-    <button id="confirmar">Confirmar</button>
+    <div>
+        <div class="centrar">
+            <h1>Expresiones regulares</h1>
+        </div>
+        <div class="centrar">
+            <select id="opcion">
+                <option value="numeros">Solo numeros</option>
+                <option value="letras">Solo letras</option>
+                <option value="letrasEspacio">Letras con espacio</option>
+                <option value="nombreApellido">Nombre y apellido</option>
+                <option value="precio">Precio</option>
+                <option value="enterosYDecimales">Enteros y decimales</option>
+                <option value="positivosYNegativos">Positivos y negativos</option>
+                <option value="milesYDecimales">Miles y decimales</option>
+                <option value="fecha">Fecha DD/MM/YYYY</option>
+                <option value="horaF12h">Hora formato 12h</option>
+                <option value="horaF24h">Hora formato 24h</option>
+                <option value="nombreUsuario">Nombre de usuario</option>
+                <option value="contrasena">Contraseña</option>
+                <option value="ipv4">Ipv4</option>
+                <option value="url">url</option>
+                <option value="colores">colores</option>
+            </select>
+            <input type="text" placeholder="Introduce la expresión" id="expresion">
+            <button id="confirmar">Confirmar</button>        
+        </div>
+        <div class="centrar" id="resultado"></div>
+    </div>
 
-    <div id="resultado"></div>
+    
+    
 </body>
 </html>
 <script src="index.js"></script> 
