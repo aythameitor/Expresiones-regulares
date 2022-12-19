@@ -55,12 +55,12 @@ function precio(cadena){
 
 function numerosEnterosYDecimales(cadena){
     let expresion = new RegExp('^[0-9]*$');
-    let expresionDec = new RegExp('^[0-9][,.][0-9]');
+    let expresionDec = new RegExp('^[0-9]+[,.]{1}[0-9]+');
     if(cadena != ""){
         if(expresion.test(cadena) || expresionDec.test(cadena)){
-            document.getElementById("resultado").innerHTML = "La cadena <strong> ^[0-9]*$ | ^[0-9][,.][0-9] </strong> concuerda con el texto.";
+            document.getElementById("resultado").innerHTML = "La cadena <strong> ^[0-9]*$ | [0-9]+[,.]{1}[0-9]+ </strong> concuerda con el texto.";
         } else {
-            document.getElementById("resultado").innerHTML = "La cadena  <strong>^[0-9]*$ | ^[0-9][,.][0-9] </strong> no concuerda con el texto.";
+            document.getElementById("resultado").innerHTML = "La cadena  <strong>^[0-9]*$ | [0-9]+[,.]{1}[0-9]+ </strong> no concuerda con el texto.";
         }
     } 
 }

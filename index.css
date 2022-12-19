@@ -7,3 +7,9 @@ body{
     justify-content: center;
     margin-top:1%;
 }
+#confirmar:hover{
+    background-color: yellow;
+}
+#confirmar{
+    border-radius:5px;
+}
