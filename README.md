@@ -1,1 +1,1 @@
-Prueba y desarrollo de una app sencilla con un front básico para el uso y manejo de las expresiones regulares
+App sencilla con algunos patrones básicos de expresiones regulares
